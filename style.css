@@ -1,20 +1,15 @@
-/* ############################################################
-   🔧🔧  GANTI BACKGROUND FOTO → LIHAT BAGIAN [1] DI BAWAH  🔧🔧🔧
-   (ada di PALING ATAS file, jadi mudah dicari)
-   ############################################################ */
+/* ============ TEMA: MERAH SUNDA (MAROON + EMAS) ============ */
 
 /* ============================================================
    [1] 🔧 TEMPAT GANTI BACKGROUND — EDIT 2 BARIS INI SAJA 🔧
-   ------------------------------------------------------------
-   • Ganti foto:      --bg-img: url('assets/bg.jpg');
-   • Balik polos:     --bg-img: none;
-   • Geser posisi:    --bg-pos: center top / center center / center bottom
-   • Terlalu gelap:   kecilkan angka .88 / .92 di bagian [2] & [3]
+   • Ganti foto:   --bg-img: url('assets/bg.jpg');
+   • Balik polos:  --bg-img: none;
+   • Posisi foto:  --bg-pos: center top / center center / center bottom
    ============================================================ */
 :root{
     --bg-img: url('assets/b3.png');
     --bg-pos: center top;
-    /* warna tema */
+
     --maroon:#4a0808; --maroon-d:#2b0303; --maroon-l:#6b0f0f;
     --red:#a31621; --red-l:#c22a35;
     --gold:#d4af37; --gold-l:#e8c96a; --gold-d:#a8842a;
@@ -29,23 +24,20 @@ img{display:block;max-width:100%}a{text-decoration:none;color:inherit}
 input,textarea,select,button{-webkit-appearance:none;appearance:none}
 .script{font-family:'Great Vibes',cursive}
 .hidden{display:none!important}
-.event-logo{width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 8px 18px rgba(212,175,55,.3))}
-.event-logo-opening{max-width:190px;margin:0 auto 1rem}
-.event-logo-hero{max-width:150px;margin:0 auto 1rem}
 
-/* >>>>>>>>>> [3] ISI UNDANGAN — pakai background [1] <<<<<<<<<< */
+/* ISI UNDANGAN — pakai background [1] */
 .invite-wrap{max-width:520px;margin:0 auto;position:relative;z-index:2;box-shadow:0 0 80px rgba(0,0,0,.6);
     background:
         linear-gradient(180deg,rgba(58,6,6,.88),rgba(74,8,8,.88) 40%,rgba(58,6,6,.88)),
         var(--bg-img, none) var(--bg-pos, center top)/cover fixed,
         #3a0606}
 
-/* ===== POLA MEGA MENDUNG EMAS ===== */
+/* POLA MEGA MENDUNG EMAS */
 .mendung{position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.07;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='70' viewBox='0 0 140 70'%3E%3Cg fill='none' stroke='%23d4af37' stroke-width='1.3'%3E%3Cpath d='M15 55c0-16 13-28 30-28s30 12 30 28'/%3E%3Cpath d='M25 55c0-10 9-18 20-18s20 8 20 18'/%3E%3Cpath d='M35 55c0-5 5-9 10-9s10 4 10 9'/%3E%3Cpath d='M85 55c0-16 13-28 30-28s30 12 30 28'/%3E%3Cpath d='M95 55c0-10 9-18 20-18s20 8 20 18'/%3E%3C/g%3E%3C/svg%3E");
     background-size:140px 70px}
 
-/* >>>>>>>>>> [2] COVER PEMBUKA — pakai background [1] <<<<<<<<<< */
+/* COVER PEMBUKA — pakai background [1] */
 .opening{position:fixed;inset:0;z-index:9000;
     background:
         radial-gradient(ellipse at 50% 30%,rgba(92,10,10,.92),rgba(43,3,3,.96) 75%),
@@ -68,7 +60,7 @@ input,textarea,select,button{-webkit-appearance:none;appearance:none}
 #particles{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:0;transition:opacity 2s}
 #particles.on{opacity:1}
 
-/* ===== FAB ===== */
+/* FAB */
 .fab{position:fixed;bottom:24px;right:24px;z-index:5000;display:flex;flex-direction:column;gap:10px;opacity:0;transform:translateY(20px);transition:.6s}
 .fab.show{opacity:1;transform:translateY(0)}
 .fab button{width:46px;height:46px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.3s;font-size:.9rem}
@@ -78,19 +70,19 @@ input,textarea,select,button{-webkit-appearance:none;appearance:none}
 .fab-top{background:var(--red);color:#fff;box-shadow:0 6px 20px rgba(163,22,33,.4)}
 .fab button:hover{transform:scale(1.1)}
 
-/* ===== LIGHTBOX ===== */
+/* LIGHTBOX */
 .lightbox{position:fixed;inset:0;z-index:8000;background:rgba(20,2,2,.95);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:.4s;cursor:pointer}
 .lightbox.open{opacity:1;visibility:visible}
 .lightbox img{max-width:90%;max-height:85vh;border-radius:12px;border:3px solid var(--gold)}
 .lightbox-close{position:absolute;top:20px;right:20px;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.12);border:none;color:#fff;cursor:pointer}
 
-/* ===== SECTION DASAR ===== */
+/* SECTION DASAR */
 section{position:relative;z-index:2;overflow:hidden;padding:90px 24px}
 .container{max-width:520px;margin:0 auto;position:relative;z-index:2}
 .sec-label{font-size:.62rem;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:.3rem}
 .sec-heading{font-size:2.4rem;color:var(--cream);text-align:center;margin-bottom:2rem}
 
-/* ===== HERO ===== */
+/* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 20px 90px}
 .hero-salam{font-size:.6rem;letter-spacing:2px;color:var(--gold-l);margin-bottom:1.6rem}
 .hero-photo{display:flex;justify-content:center;margin-bottom:1.4rem}
@@ -111,7 +103,7 @@ section{position:relative;z-index:2;overflow:hidden;padding:90px 24px}
 .scroll-hint i{color:var(--gold);animation:bounce 2s infinite}
 @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
 
-/* ===== MUQADDIMAH ===== */
+/* MUQADDIMAH */
 .m-salam{text-align:center;font-weight:600;color:var(--gold-l);margin-bottom:1.2rem}
 .m-text{text-align:center;font-size:.85rem;line-height:2;color:var(--cream-d);margin-bottom:1.8rem}
 .info-row{display:grid;grid-template-columns:1fr;gap:20px;max-width:460px;margin:0 auto 2rem;background:rgba(255,255,255,.04);border:1px solid rgba(212,175,55,.3);border-radius:18px;padding:26px 20px;backdrop-filter:blur(6px)}
@@ -126,34 +118,33 @@ section{position:relative;z-index:2;overflow:hidden;padding:90px 24px}
 .pill{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--maroon-d);font-size:.72rem;font-weight:700;padding:6px 22px;border-radius:50px;margin-bottom:.7rem}
 .info-box p{font-size:.8rem;line-height:1.8;color:var(--cream-d)}
 
-/* ===== DOA ===== */
+/* DOA */
 .doa{text-align:center}
 .doa-kujang{width:30px;height:50px;color:var(--gold);margin:0 auto 1.4rem;filter:drop-shadow(0 0 8px rgba(212,175,55,.5))}
 .doa-kujang svg{width:100%;height:100%}
 .doa-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;line-height:2.1;color:var(--cream);max-width:420px;margin:0 auto}
 
-/* ===== KELUARGA ===== */
+/* KELUARGA */
 .keluarga{text-align:center}
 .fam-photo{display:flex;justify-content:center;margin-bottom:1.4rem}
 .fam-frame{width:100%;max-width:340px;border-radius:16px;overflow:hidden;border:4px solid var(--gold);box-shadow:0 18px 50px rgba(0,0,0,.5)}
 .fam-names{font-weight:600;color:var(--gold-l);font-size:.95rem}
 
-/* ===== MENGUNDANG ===== */
+/* MENGUNDANG */
 .mengundang{text-align:center}
 .tm-flourish{width:200px;margin:0 auto 1.6rem;color:var(--gold)}
 .tm-list{max-width:340px;margin:0 auto;text-align:left;font-size:.88rem;line-height:2.2;color:var(--cream-d)}
 .tm-list li::marker{color:var(--gold);font-weight:700}
 
-/* ===== GALLERY ===== */
+/* GALLERY — 4 KOTAK SAMA BESAR */
 .gal-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:460px;margin:0 auto}
-.gal-grid .g-item:nth-child(1){grid-row:auto;aspect-ratio:1}
 .g-item{border-radius:12px;overflow:hidden;cursor:pointer;position:relative;aspect-ratio:1;box-shadow:0 10px 26px rgba(0,0,0,.4);border:3px solid var(--gold)}
 .g-item img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .6s}
 .g-item:hover img{transform:scale(1.06)}
 .g-item .g-zoom{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:1.1rem;opacity:0;transition:.4s}
 .g-item:hover .g-zoom{opacity:1}
 
-/* ===== LOKASI ===== */
+/* LOKASI */
 .loc-card{max-width:460px;margin:0 auto;background:rgba(255,255,255,.04);border:1px solid rgba(212,175,55,.3);border-radius:18px;overflow:hidden;backdrop-filter:blur(6px)}
 .loc-map{width:100%;height:220px;border:none;display:block}
 .loc-body{padding:24px;text-align:center}
@@ -162,7 +153,7 @@ section{position:relative;z-index:2;overflow:hidden;padding:90px 24px}
 .btn-gmap{display:inline-flex;align-items:center;gap:8px;padding:11px 26px;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--maroon-d);border:none;border-radius:50px;font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:.3s}
 .btn-gmap:hover{transform:translateY(-2px)}
 
-/* ===== GIFT ===== */
+/* GIFT */
 .gift-intro{text-align:center;font-size:.83rem;line-height:2;max-width:400px;margin:0 auto 1.6rem;color:var(--cream-d)}
 .gift-cards{display:grid;gap:14px;max-width:380px;margin:0 auto}
 .gift-item{background:rgba(255,255,255,.04);border:1px solid rgba(212,175,55,.3);border-radius:16px;padding:22px;text-align:center}
@@ -172,7 +163,7 @@ section{position:relative;z-index:2;overflow:hidden;padding:90px 24px}
 .btn-copy{display:inline-flex;align-items:center;gap:6px;padding:8px 20px;border:1px solid var(--gold);border-radius:50px;background:transparent;color:var(--gold);font-size:.62rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:.3s}
 .btn-copy:hover,.btn-copy.copied{background:var(--gold);color:var(--maroon-d)}
 
-/* ===== RSVP ===== */
+/* RSVP + UCAPAN */
 .kform-box{max-width:420px;margin:0 auto;background:rgba(255,255,255,.04);border:1px solid rgba(212,175,55,.3);border-radius:18px;padding:26px 22px;backdrop-filter:blur(6px)}
 .field{margin-bottom:1rem}
 .field label{display:block;font-size:.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:.4rem}
@@ -186,8 +177,14 @@ section{position:relative;z-index:2;overflow:hidden;padding:90px 24px}
 .kform-ok{margin-top:1rem;padding:12px;border-radius:10px;text-align:center;font-size:.8rem;display:none;background:rgba(212,175,55,.15);color:var(--gold-l);border:1px solid rgba(212,175,55,.4)}
 .kform-ok.show{display:block;animation:fadeUp .5s}
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.wish-list{display:grid;gap:12px}
+.wish-card{background:rgba(253,246,236,.95);padding:14px 16px;border-radius:10px;border-left:4px solid var(--gold);color:#33302b;text-align:left}
+.wish-card .wish-name{font-weight:700;color:var(--maroon);margin-bottom:4px}
+.wish-card .wish-msg{font-style:italic;color:#555;margin-bottom:6px}
+.wish-card .wish-time{font-size:.72rem;color:#999}
+.empty-state{text-align:center;padding:20px;color:var(--cream-d);font-style:italic}
 
-/* ===== CLOSING ===== */
+/* CLOSING */
 .closing{text-align:center;padding:110px 24px}
 .cl-msg{font-size:.85rem;line-height:2;color:var(--cream-d);margin-bottom:1rem}
 .cl-names{font-size:2.6rem;color:var(--gold)}
@@ -197,7 +194,7 @@ footer{padding:20px;text-align:center;background:var(--maroon-d)}
 footer p{font-size:.6rem;color:rgba(255,255,255,.35);letter-spacing:1px}
 footer i{color:var(--red-l);font-size:.5rem}
 
-/* ===== REVEAL ===== */
+/* REVEAL */
 .reveal{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}
 .reveal.visible{opacity:1;transform:translateY(0)}
 .reveal-d1{transition-delay:.1s}.reveal-d2{transition-delay:.2s}.reveal-d3{transition-delay:.3s}
@@ -232,12 +229,7 @@ body.admin-body{background:#f6f1e7;padding:20px;color:#333}
 .badge-hadir{background:#d4edda;color:#155724}
 .badge-tidak{background:#f8d7da;color:#721c24}
 .badge-ragu{background:#fff3cd;color:#856404}
-.wish-list{padding:20px;display:grid;gap:14px}
-.wish-card{background:#faf6ee;padding:14px 16px;border-radius:8px;border-left:4px solid var(--gold)}
-.wish-card .wish-name{font-weight:700;color:var(--maroon);margin-bottom:4px}
-.wish-card .wish-msg{font-style:italic;color:#555;margin-bottom:6px}
-.wish-card .wish-time{font-size:.72rem;color:#999}
-.empty-state{text-align:center;padding:40px;color:#999;font-style:italic}
+.admin-list{padding:20px;display:grid;gap:14px}
 .del-btn{background:none;border:none;color:#dc3545;cursor:pointer}
 .gen-body{padding:20px}
 .gen-row{display:flex;gap:10px;flex-wrap:wrap}
@@ -250,19 +242,3 @@ body.admin-body{background:#f6f1e7;padding:20px;color:#333}
 .pin-box small{opacity:.7}
 .pin-box input{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(212,175,55,.4);background:rgba(0,0,0,.3);color:var(--cream);text-align:center;letter-spacing:6px;margin:1.1rem 0;outline:none}
 .pin-box button{width:100%;padding:12px;border:none;border-radius:50px;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--maroon-d);font-weight:700;cursor:pointer}
-/* =====================================================
-   🔧 GANTI BACKGROUND FOTO — EDIT DI BLOK INI 🔧
-   • Ganti foto  : ubah url('assets/f1.jpeg')
-   • Geser posisi: ubah center top / center center / center bottom
-   • Gelap-terang: ubah angka .88 (besar = gelap, kecil = terang)
-   • Balik polos : hapus blok ini
-   ===================================================== */
-.hero{display:flex;flex-direction:column;align-items:center;justify-content:center}
-
-.opening,
-.invite-wrap{
-    background:
-        linear-gradient(180deg,rgba(43,3,3,.88),rgba(58,6,6,.88)),
-        url('assets/b3.png') center top/cover no-repeat fixed,
-        #2b0303;
-}
