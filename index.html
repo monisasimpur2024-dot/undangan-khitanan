@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Walimatul Khitan — Reynand Abrisam</title>
+<meta name="theme-color" content="#2b0303">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Kaushan+Script&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="invite-body">
+
+<canvas id="particles"></canvas>
+
+<!-- ===== COVER ===== -->
+<div class="opening" id="opening">
+    <div class="open-content">
+        <div class="open-kujang"><svg width="34" height="56" viewBox="0 0 34 56" fill="currentColor"><path d="M17 0 L26 8 L22 18 L28 24 L22 34 L26 46 L17 56 L8 46 L12 34 L6 24 L12 18 L8 8 Z M17 10 L21 16 L17 22 L13 16 Z"/></svg></div>
+        <p class="open-jenis script">Walimatul Khitan</p>
+        <h2 class="open-name">Reynand Abrisam</h2>
+        <div class="open-card">
+            <p class="label">Kepada Yth.</p>
+            <p class="to" id="guestName">Bapak/Ibu/Saudara/i</p>
+        </div>
+        <button class="btn-enter" id="btnEnter"><i class="fas fa-envelope-open"></i> Buka Undangan</button>
+        <p class="open-hint">Assalamualaikum Wr. Wb.</p>
+    </div>
+</div>
+
+<audio id="music" loop><source src="assets/audio (2).mpeg type="audio/mpeg"></audio>
+
+<div class="fab" id="fab">
+    <button class="fab-music" id="fabMusic" aria-label="Musik"><i class="fas fa-music"></i></button>
+    <button class="fab-top" id="fabTop" aria-label="Ke atas"><i class="fas fa-arrow-up"></i></button>
+</div>
+
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lbClose"><i class="fas fa-times"></i></button>
+    <img src="" alt="Preview" id="lbImg">
+</div>
+
+<div class="invite-wrap">
+<div class="mendung"></div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <p class="hero-salam">Assalamualaikum Warahmatullahi Wabarakatuh</p>
+    <div class="hero-photo"><div class="hero-frame"><img src="assets/f4.jpg" alt="Reynand Abrisam"></div></div>
+    <p class="hero-jenis script">Walimatul Khitan</p>
+    <h1 class="hero-name">Reynand Abrisam</h1>
+    <p class="hero-anakke">Anak Kedua Dari</p>
+    <p class="hero-parents">Bapak. Rahmat (Muhamad) &amp; Ibu. Susi Marlena</p>
+    <p class="hero-date">Minggu, 30 Agustus 2026</p>
+    <svg class="hero-flourish" width="200" height="24" viewBox="0 0 200 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M10 12 Q 40 2, 70 12 T 130 12 T 190 12"/><circle cx="100" cy="12" r="3" fill="currentColor"/></svg>
+    <div class="cd-row">
+        <div class="cd-box"><span class="num" id="cD">00</span><span class="txt">Hari</span></div>
+        <div class="cd-box"><span class="num" id="cH">00</span><span class="txt">Jam</span></div>
+        <div class="cd-box"><span class="num" id="cM">00</span><span class="txt">Menit</span></div>
+        <div class="cd-box"><span class="num" id="cS">00</span><span class="txt">Detik</span></div>
+    </div>
+    <div class="scroll-hint"><span>Scroll</span><i class="fas fa-chevron-down"></i></div>
+</section>
+
+<!-- ===== MUQADDIMAH ===== -->
+<section class="muqaddimah">
+    <div class="container">
+        <p class="m-salam reveal">Assalamualaikum Warahmatullahi Wabarakatuh</p>
+        <p class="m-text reveal reveal-d1">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan syukuran Khitanan putra kami, yang Insya Allah akan diselenggarakan pada :</p>
+        <div class="info-row reveal reveal-d2">
+            <div class="info-date">
+                <span class="d-dayname">MINGGU</span>
+                <div class="d-big"><span class="d-num">30</span><span class="d-month script">Agustus</span></div>
+                <span class="d-year">2026</span>
+            </div>
+            <div class="info-box">
+                <span class="pill">Acara</span>
+                <p>Pukul : 07.30 WIB<br>Sampai dengan Selesai</p>
+            </div>
+            <div class="info-box">
+                <span class="pill">Tempat</span>
+                <p>Tanjung Waras, Dusun 3<br>Sinar Banten / Tanah Miring<br>Kec. Bukit Kemuning</p>
+            </div>
+        </div>
+        <p class="m-text reveal reveal-d3">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak / Ibu / Saudara(i) berkenan hadir untuk memberikan do'a restu kepada kami sekeluarga. Atas kehadiran dan do'a restunya kami ucapkan terimakasih.</p>
+    </div>
+</section>
+
+<!-- ===== DOA ===== -->
+<section class="doa">
+    <div class="container">
+        <div class="doa-kujang reveal"><svg width="30" height="50" viewBox="0 0 34 56" fill="currentColor"><path d="M17 0 L26 8 L22 18 L28 24 L22 34 L26 46 L17 56 L8 46 L12 34 L6 24 L12 18 L8 8 Z M17 10 L21 16 L17 22 L13 16 Z"/></svg></div>
+        <p class="doa-text reveal reveal-d1">"Ya Allah jadikanlah dia anak yang sholeh, yang berbakti kepada kedua orang tuanya dan menta'ati aturan Allah SWT serta Rosul-Nya. Aamiin....."</p>
+    </div>
+</section>
+
+<!-- ===== KELUARGA ===== -->
+<section class="keluarga">
+    <div class="container">
+        <p class="sec-label reveal">Kami Yang Berbahagia</p>
+        <h2 class="sec-heading script reveal reveal-d1">Keluarga Besar</h2>
+        <div class="fam-photo reveal reveal-d2"><div class="fam-frame"><img src="assets/f2.jpeg" alt="Keluarga Besar"></div></div>
+        <p class="fam-names reveal reveal-d3">Bapak. Rahmat (Muhamad) &amp; Ibu. Susi Marlena</p>
+    </div>
+</section>
+
+<!-- ===== TURUT MENGUNDANG ===== -->
+<section class="mengundang">
+    <div class="container">
+        <p class="sec-label reveal">Turut Mengundang</p>
+        <svg class="tm-flourish reveal" width="200" height="24" viewBox="0 0 200 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M10 12 Q 40 2, 70 12 T 130 12 T 190 12"/><circle cx="100" cy="12" r="3" fill="currentColor"/></svg>
+        <ol class="tm-list reveal reveal-d1">
+            <li>Bapak. Mansur ( Kepala Desa )</li>
+            <li>Bapak. Sapri ( Kadus )</li>
+            <li>Bapak. Solihin ( RT )</li>
+            <li>Bapak. Muhimin</li>
+            <li>Segenap Panitia</li>
+        </ol>
+    </div>
+</section>
+
+<!-- ===== LOKASI ===== -->
+<section class="lokasi">
+    <div class="container">
+        <p class="sec-label reveal">Lokasi</p>
+        <h2 class="sec-heading script reveal reveal-d1">Peta Acara</h2>
+        <div class="loc-card reveal reveal-d2">
+            <iframe class="loc-map" src="https://maps.google.com/maps?q=Tanjung+Waras,+Sinar+Banten,+Bukit+Kemuning&t=&z=12&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy"></iframe>
+            <div class="loc-body">
+                <h3>Tanjung Waras, Dusun 3</h3>
+                <p>Sinar Banten / Tanah Miring, Kec. Bukit Kemuning</p>
+                <button class="btn-gmap" id="btnMap"><i class="fas fa-directions"></i> Buka Peta</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== GALERI ===== -->
+<section class="gallery">
+    <div class="container">
+        <p class="sec-label reveal">Galeri</p>
+        <h2 class="sec-heading script reveal reveal-d1">Momen Bahagia</h2>
+       <div class="gal-grid reveal reveal-d2">
+    <!-- 1 = kotak BESAR kiri -->
+    <div class="g-item" data-src="assets/f4.jpg"><img src="assets/f4.jpg" alt="Foto 1"><div class="g-zoom"><i class="fas fa-expand"></i></div></div>
+    <!-- 2 = kanan atas -->
+    <div class="g-item" data-src="assets/f1.jpeg"><img src="assets/f1.jpeg"Foto 2"><div class="g-zoom"><i class="fas fa-expand"></i></div></div>
+    <!-- 3 = kanan bawah -->
+    <div class="g-item" data-src="assets/f2.jpeg"><img src="assets/f2.jpeg alt="Foto 3"><div class="g-zoom"><i class="fas fa-expand"></i></div></div>
+    <!-- 4 = kiri bawah -->
+    <div class="g-item" data-src="assets/f3.jpeg"><img src="assets/f3.jpeg" alt="Foto 4"><div class="g-zoom"><i class="fas fa-expand"></i></div></div>
+</div>
+    </div>
+</section>
+
+<!-- ===== GIFT ===== -->
+<section class="gift">
+    <div class="container">
+        <p class="sec-label reveal">Tanda Kasih</p>
+        <h2 class="sec-heading script reveal reveal-d1">Amplop Digital</h2>
+        <p class="gift-intro reveal reveal-d2">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi adalah ungkapan tanda kasih Anda, dapat melalui :</p>
+        <div class="gift-cards reveal reveal-d2">
+            <div class="gift-item">
+                <h4>Bank BRI</h4>
+                <p class="gift-number">0155 0100 2581 564</p>
+                <p class="gift-holder">a.n. Rahmat</p>
+                <button class="btn-copy" data-num="015501002581564"><i class="far fa-copy"></i> Salin</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== RSVP + UCAPAN ===== -->
+<section class="rsvp">
+    <div class="container">
+        <p class="sec-label reveal">Konfirmasi</p>
+        <h2 class="sec-heading script reveal reveal-d1">Ucapan &amp; Doa</h2>
+        <div class="kform-box reveal reveal-d2">
+            <form id="kform">
+                <div class="field"><label for="kName">Nama Tamu</label><input type="text" id="kName" placeholder="Tulis nama Anda" required></div>
+                <div class="field"><label for="kJumlah">Jumlah Hadir</label><input type="number" id="kJumlah" placeholder="Conto: 3" min="1" required></div>
+                <div class="field"><label for="kKonfirmasi">Konfirmasi Kehadiran</label>
+                    <select id="kKonfirmasi" required>
+                        <option value="">Pilih konfirmasi</option>
+                        <option value="Hadir">Insya Allah Hadir</option>
+                        <option value="Berhalangan">Berhalangan Hadir</option>
+                        <option value="Masih Ragu">Masih Ragu</option>
+                    </select>
+                </div>
+                <div class="field"><label for="kPesan">Ucapan (opsional)</label><textarea id="kPesan" placeholder="Tulis ucapan & doa"></textarea></div>
+                <button type="submit" class="btn-submit">Kirim Konfirmasi</button>
+            </form>
+            <div class="kform-ok" id="kformOk"><i class="fas fa-check-circle" style="margin-right:6px"></i>Hatur nuhun, konfirmasi terkirim!</div>
+        </div>
+        <div class="wish-list" id="wishList" style="max-width:460px;margin:24px auto 0"></div>
+
+    </div>
+</section>
+
+<!-- ===== CLOSING ===== -->
+<section class="closing">
+    <p class="cl-msg reveal">Atas kehadiran dan doa restunya kami ucapkan terimakasih.<br>Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+    <h2 class="cl-names script reveal reveal-d1">Reynand Abrisam</h2>
+    <p class="cl-date reveal reveal-d2">Minggu, 30 Agustus 2026</p>
+</section>
+
+</div><!-- /invite-wrap -->
+
+<footer><p>Made with <i class="fas fa-heart"></i> — Percetakan Rahmat Wijaya <a href="admin.html" style="color:var(--gold)">sidodadi</a></p></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
