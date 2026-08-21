@@ -63,10 +63,8 @@ function initInvite(){
 
     function renderWishes(){
         var w=store.get('khitan_wishes',[]);
-        var emptyEl=$('wishEmpty');
-        if(emptyEl)emptyEl.style.display=w.length?'none':'block';
-        var listEl=$('wishList');
-        if(listEl)listEl.innerHTML=w.slice(0,50).map(function(x){
+        $('wishEmpty').style.display=w.length?'none':'block';
+        $('wishList').innerHTML=w.slice(0,50).map(function(x){
             return '<div class="wish-card"><div class="wish-name">'+esc(x.nama)+' <span class="badge '+(x.status==='Hadir'?'badge-hadir':x.status==='Berhalangan'?'badge-tidak':'badge-ragu')+'">'+esc(x.status||'')+'</span></div><div class="wish-msg">'+esc(x.pesan)+'</div><div class="wish-time">'+fmtT(x.waktu)+'</div></div>';
         }).join('');
     }
