@@ -4,7 +4,7 @@
    [1] 🔧 GANTI BACKGROUND: edit --bg-img di bawah ini
    ============================================================ */
 :root{
-    --bg-img: url('assets/b3.png');
+    --bg-img: url('b3.png');
     --bg-pos: center top;
     --maroon:#4a0808; --maroon-d:#2b0303; --maroon-l:#6b0f0f;
     --red:#a31621; --red-l:#c22a35;
@@ -21,21 +21,23 @@ input,textarea,select,button{-webkit-appearance:none;appearance:none}
 .script{font-family:'Great Vibes',cursive}
 .hidden{display:none!important}
 
+/* ISI UNDANGAN + BACKGROUND FOTO (2 path: root & assets) */
 .invite-wrap{max-width:520px;margin:0 auto;position:relative;z-index:2;box-shadow:0 0 80px rgba(0,0,0,.6);
     background:
-        linear-gradient(180deg,rgba(58,6,6,.88),rgba(74,8,8,.88) 40%,rgba(58,6,6,.88)),
-        var(--bg-img, none) var(--bg-pos, center top)/cover fixed,
-        #3a0606}
+        linear-gradient(180deg,rgba(58,6,6,.86),rgba(74,8,8,.86) 40%,rgba(58,6,6,.86)),
+        url('b3.png') center top/cover fixed,
+        url('assets/b3.png') center top/cover fixed #3a0606}
 
 .mendung{position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.07;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='70' viewBox='0 0 140 70'%3E%3Cg fill='none' stroke='%23d4af37' stroke-width='1.3'%3E%3Cpath d='M15 55c0-16 13-28 30-28s30 12 30 28'/%3E%3Cpath d='M25 55c0-10 9-18 20-18s20 8 20 18'/%3E%3Cpath d='M35 55c0-5 5-9 10-9s10 4 10 9'/%3E%3Cpath d='M85 55c0-16 13-28 30-28s30 12 30 28'/%3E%3Cpath d='M95 55c0-10 9-18 20-18s20 8 20 18'/%3E%3C/g%3E%3C/svg%3E");
     background-size:140px 70px}
 
+/* COVER PEMBUKA + BACKGROUND FOTO */
 .opening{position:fixed;inset:0;z-index:9000;
     background:
-        radial-gradient(ellipse at 50% 30%,rgba(92,10,10,.92),rgba(43,3,3,.96) 75%),
-        var(--bg-img, none) var(--bg-pos, center top)/cover no-repeat,
-        #2b0303;
+        radial-gradient(ellipse at 50% 30%,rgba(92,10,10,.9),rgba(43,3,3,.94) 75%),
+        url('b3.png') center top/cover no-repeat,
+        url('assets/b3.png') center top/cover no-repeat #2b0303;
     display:flex;align-items:center;justify-content:center;transition:opacity .8s,visibility .8s}
 .opening.hide{opacity:0;visibility:hidden;pointer-events:none}
 .open-content{position:relative;z-index:2;text-align:center;padding:24px;max-width:420px;width:100%}
@@ -73,6 +75,7 @@ section{position:relative;z-index:2;overflow:hidden;padding:90px 24px}
 .sec-label{font-size:.62rem;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--gold);text-align:center;margin-bottom:.3rem}
 .sec-heading{font-size:2.4rem;color:var(--cream);text-align:center;margin-bottom:2rem}
 
+/* HERO — lengkap dengan min-height + padding */
 .hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:70px 20px 90px}
 .hero-salam{font-size:.6rem;letter-spacing:2px;color:var(--gold-l);margin-bottom:1.6rem}
 .hero-photo{display:flex;justify-content:center;margin-bottom:1.4rem}
@@ -251,4 +254,4 @@ body{font-family:'Poppins',sans-serif;color:#f5e9d7;overflow-x:hidden;background
         url('assets/b3.png') center top/cover no-repeat #2b0303}
 
 /* HERO tersusun ke bawah */
-.hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}s
