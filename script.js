@@ -99,7 +99,6 @@ function initInvite(){
 
 /* ================= ADMIN ================= */
 function initAdmin(){
-    if(sessionStorage.getItem('khitan_admin')==='1')unlock();
     $('formPIN').addEventListener('submit',function(e){
         e.preventDefault();
         if($('pinInput').value===ADMIN_PIN){sessionStorage.setItem('khitan_admin','1');unlock()}
@@ -109,6 +108,8 @@ function initAdmin(){
     function unlock(){$('pinGate').classList.add('hidden');$('adminMain').classList.remove('hidden');renderAll()}
 
     var getR=function(){return store.get('khitan_rsvps',[])},getW=function(){return store.get('khitan_wishes',[])};
+
+    if(sessionStorage.getItem('khitan_admin')==='1')unlock();
 
     function renderAll(){
         var r=getR(),w=getW();
@@ -149,11 +150,15 @@ function initAdmin(){
     });
 
     $('btnGen').addEventListener('click',function(){
-        var nama=$('guestInput').value.trim();
-        var base=(location.origin&&location.origin!=='null')?location.origin:'';
-        var path=location.pathname.replace(/admin\.html.*$/,'index.html')||'/index.html';
-        var link=base+path+(nama?'?to='+encodeURIComponent(nama):'');
-        $('linkOut').textContent=link;
+    var nama=$('guestInput').value.trim();
+    var link=new URL('index.html',location.href);
+    if(nama)link.searchParams.set('to',nama);
+    link=link.href;
+    var linkEl=$('linkOut');
+    linkEl.textContent=link;
+    linkEl.style.cursor='pointer';
+    linkEl.style.textDecoration='underline';
+    linkEl.onclick=function(){window.open(link,'_blank')};
         $('linkResult').classList.remove('hidden');
         $('btnCopyLink').onclick=function(){copyText(link,'Link disalin ✓')};
         $('btnWA').onclick=function(){
